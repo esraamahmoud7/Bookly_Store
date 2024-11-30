@@ -1,6 +1,9 @@
+import 'package:booklt_store/Features/Home/Presentation/views/HomeView.dart';
 import 'package:booklt_store/constants.dart';
 import 'package:booklt_store/core/utils/assets.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import 'SlidingText.dart';
 class SplashViewBody extends StatefulWidget {
@@ -20,13 +23,9 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
   void initState() {
     // TODO: implement initState
     super.initState();
-    animationController = AnimationController(vsync: this,duration: Duration(seconds: 1));
-
-    slidingAnimation = Tween<Offset>(begin:const Offset(0, 2),end: Offset.zero).animate(animationController);
-
-    animationController.forward();
+    initSlidingAnimation();
+    NavigateHome();
   }
-
   void dispose()
   {
     super.dispose();
@@ -44,5 +43,18 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
         SlidingText(slidingAnimation: slidingAnimation)
       ],
     );
+  }
+  void initSlidingAnimation() {
+    animationController = AnimationController(vsync: this,duration: Duration(seconds: 1));
+
+    slidingAnimation = Tween<Offset>(begin:const Offset(0, 2),end: Offset.zero).animate(animationController);
+
+    animationController.forward();
+  }
+
+  void NavigateHome() {
+    Future.delayed(Duration(seconds:2),(){
+      Get.to(()=>const Homeview(),transition: Transition.fade,duration: const Duration(milliseconds: 250));
+    });
   }
 }
