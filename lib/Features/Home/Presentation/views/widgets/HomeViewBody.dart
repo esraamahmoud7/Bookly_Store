@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'BookCard.dart';
 import 'CustomAppBar.dart';
+import 'ListView.dart';
 
 class HomeBody extends StatelessWidget {
   const HomeBody({super.key});
@@ -11,7 +12,7 @@ class HomeBody extends StatelessWidget {
     return Column(
       children: [
         customAppBar(),
-        BookCard()
+        CardListView()
       ],
     );
   }
