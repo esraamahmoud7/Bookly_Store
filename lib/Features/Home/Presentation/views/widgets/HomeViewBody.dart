@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styles.dart';
+import 'BestSellerCard.dart';
 import 'BookCard.dart';
 import 'CustomAppBar.dart';
 import 'ListView.dart';
@@ -20,7 +21,10 @@ class HomeBody extends StatelessWidget {
           SizedBox(height: 50,),
           Align(
             alignment: Alignment.centerLeft,
-              child: Text("Best Seller",style: Styles.titleMedium,))
+              child: Text("Best Seller",style: Styles.titleMedium,)
+          ),
+          SizedBox(height:20 ,),
+          BestSellerCard()
         ],
       ),
     );
