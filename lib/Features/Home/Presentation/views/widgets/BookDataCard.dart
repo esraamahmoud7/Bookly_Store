@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../constants.dart';
 import '../../../../../core/utils/styles.dart';
 
 class BookDataCard extends StatelessWidget {
@@ -10,17 +11,25 @@ class BookDataCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("The jungle Book",style: Styles.titleMedium,),
-        SizedBox(height: 4,),
-        Text("Rudyard Kipling",style: Styles.titleSmall,),
+        SizedBox(
+          width: MediaQuery.of(context).size.width*.5,
+            child: Text("The jungle Book",
+              style: Styles.textStyle20.copyWith(fontFamily: kGtSectraFine),
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+            )
+        ),
+        const SizedBox(height: 3,),
+        Text("Rudyard Kipling",style: Styles.textStyle14,),
         SizedBox(height: 4,),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text("39\$",style: Styles.titleMedium,),
+            Text("39\$",style: Styles.textStyle20.copyWith(fontWeight: FontWeight.bold),),
             SizedBox(width: 60,),
-            Text("3",style: Styles.titleMedium,)
+            Text("3",style: Styles.textStyle20,)
           ],
         )
       ],
