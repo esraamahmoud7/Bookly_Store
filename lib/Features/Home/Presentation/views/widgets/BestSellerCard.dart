@@ -1,7 +1,7 @@
 import 'package:booklt_store/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
-import 'BookDataCard.dart';
+import 'bestSeller_BookDataCard.dart';
 
 
 class BestSellerCard extends StatelessWidget {
@@ -17,6 +17,7 @@ class BestSellerCard extends StatelessWidget {
                 aspectRatio: 2.5/4,
                 child: Container(
                   decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
                       image: DecorationImage(
                           fit: BoxFit.fill,
                           image: AssetImage(AssetsData.testImage)

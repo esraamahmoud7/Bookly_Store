@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styles.dart';
 import 'BestSellerCard.dart';
+import 'BestSellerListView.dart';
 import 'BookCard.dart';
 import 'CustomAppBar.dart';
 import 'ListView.dart';
@@ -11,22 +12,33 @@ class HomeBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          customAppBar(),
-          CardListView(),
-          SizedBox(height: 50,),
-          Align(
-            alignment: Alignment.centerLeft,
-              child: Text("Best Seller",style: Styles.textStyle18,)
-          ),
-          SizedBox(height:20 ,),
-          BestSellerCard()
-        ],
-      ),
+    return CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: customAppBar(),
+              ),
+              CardListView(),
+              SizedBox(height: 50,),
+              Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text("Best Seller",style: Styles.textStyle18,)
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: SizedBox(height: 15,),
+              ),
+            ],
+          ) ,
+        ),
+        SliverToBoxAdapter(child: BestSellerListView(),)
+      ],
     );
   }
 }
+
+
