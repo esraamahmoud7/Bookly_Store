@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../../core/utils/styles.dart';
 import 'BestSellerCard.dart';
 import 'BestSellerListView.dart';
-import 'BookCard.dart';
+import 'CustomBookImage.dart';
 import 'CustomAppBar.dart';
 import 'ListView.dart';
 
@@ -26,7 +26,10 @@ class HomeBody extends StatelessWidget {
               SizedBox(height: 50,),
               Align(
                   alignment: Alignment.centerLeft,
-                  child: Text("Best Seller",style: Styles.textStyle18,)
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 16.0),
+                    child: Text("Best Seller",style: Styles.textStyle18,),
+                  )
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
