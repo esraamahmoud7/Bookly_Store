@@ -1,4 +1,6 @@
+import 'package:booklt_store/Features/Home/Presentation/views/widgets/BookRate.dart';
 import 'package:booklt_store/core/utils/AppRouters.dart';
+import 'package:booklt_store/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -19,9 +21,22 @@ class bookDetailsViewBody extends StatelessWidget {
             const SafeArea(child: CustomAppBarBookDetails()),
             SizedBox(height: 20,),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: width *.17),
+              padding: EdgeInsets.symmetric(horizontal: width *.2),
               child: const BookCard(),
-            )
+            ),
+            SizedBox(height: 43,),
+            Text("The Jungle Book" ,  style:Styles.textStyle30.copyWith(fontWeight: FontWeight.bold)),
+            SizedBox(height:6 ,),
+            Opacity(
+              opacity: .7,
+              child: Text("Rudyard Kipling" ,
+                  style:Styles.textStyle20.copyWith(
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.w500
+              )),
+            ),
+            const SizedBox(height: 18,),
+            BookRate(mainAxisAlignment: MainAxisAlignment.center,),
           ],
         ),
       ),

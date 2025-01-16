@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../constants.dart';
 import '../../../../../core/utils/styles.dart';
+import 'BookRate.dart';
 
 class BookDataCard extends StatelessWidget {
   const BookDataCard({
@@ -18,13 +19,13 @@ class BookDataCard extends StatelessWidget {
           SizedBox(
             width: MediaQuery.of(context).size.width*.5,
               child: Text("The jungle Book",
-                style: Styles.textStyle20.copyWith(fontFamily: kGtSectraFine),
+                style: Styles.textStyle20.copyWith(fontFamily: kPT,fontSize: 22),
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
               )
           ),
           const SizedBox(height: 3,),
-          Text("Rudyard Kipling",style: Styles.textStyle14,),
+          Opacity(opacity: 0.7,child: Text("Rudyard Kipling",style: Styles.textStyle16.copyWith(fontStyle: FontStyle.italic),)),
           SizedBox(height: 4,),
           Row(
             // mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -33,11 +34,7 @@ class BookDataCard extends StatelessWidget {
               Spacer(),
               // SizedBox(width: 60,),
               // Icon(Icons.star,color: Colors.yellow,),
-              const Icon(FontAwesomeIcons.solidStar,color: Colors.yellow,size: 14,),
-              const SizedBox(width: 6,),
-              const Text("3.8",style: Styles.textStyle16,),
-              const SizedBox(width: 6,),
-              Text("(12345)",style: Styles.textStyle14.copyWith(color: Color(0xff707070)),)
+              BookRate(mainAxisAlignment: MainAxisAlignment.end,)
             ],
           )
         ],

@@ -15,8 +15,8 @@ abstract class Styles {
   static const textStyle30 = TextStyle(
     fontSize: 30,
     fontWeight: FontWeight.w900,
-    fontFamily: kGtSectraFine,
-    letterSpacing: 1.2,
+    // fontFamily: 'PTSerif',
+    // letterSpacing: 1.2,
   );
   static const textStyle14 = TextStyle(
     fontSize: 14,

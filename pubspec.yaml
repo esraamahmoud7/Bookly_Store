@@ -77,9 +77,16 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
 fonts:
-  - family: GT Sectra Fine
+  - family: PTSerif
     fonts:
-      - asset: assets/fonts/GT Sectra Fine Regular.ttf
+      - asset: assets/fonts/PTSerif-Regular.ttf
+#      - asset: assets/fonts/PTSerif-Bold.ttf
+#        weight: 700
+#      - asset: assets/fonts/PTSerif-Italic.ttf
+#        style: italic
+#      - asset: assets/fonts/PTSerif-BoldItalic.ttf
+#        weight: 700
+#        style: italic
 
     
   #
