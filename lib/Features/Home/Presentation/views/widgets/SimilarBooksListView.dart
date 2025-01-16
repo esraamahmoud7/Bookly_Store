@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 import 'CustomBookImage.dart';
 
-class CardListView extends StatelessWidget {
-  const CardListView({super.key});
+class similarBooksListView extends StatelessWidget {
+  const similarBooksListView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.3,
+      height: MediaQuery.of(context).size.height * 0.15,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: 5,
@@ -16,7 +16,7 @@ class CardListView extends StatelessWidget {
         {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: BookCard(),
+            child: BookImageItem(),
           );
         },
 

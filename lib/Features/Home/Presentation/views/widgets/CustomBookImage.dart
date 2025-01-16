@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/assets.dart';
 
-class BookCard extends StatelessWidget {
-  const BookCard({super.key});
+class BookImageItem extends StatelessWidget {
+  const BookImageItem({super.key});
+
 
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 2.8/4,
+      aspectRatio: 2.6/4,
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
