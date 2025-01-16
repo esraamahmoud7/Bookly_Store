@@ -4,6 +4,8 @@ import 'package:booklt_store/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../../core/widgets/CustomButton.dart';
+import 'BooksAction.dart';
 import 'CustomBookImage.dart';
 import 'CustomAppBarBookDetails.dart';
 
@@ -35,14 +37,14 @@ class bookDetailsViewBody extends StatelessWidget {
                     fontWeight: FontWeight.w500
               )),
             ),
-            const SizedBox(height: 18,),
+            const SizedBox(height: 5,),
             BookRate(mainAxisAlignment: MainAxisAlignment.center,),
+            const SizedBox(height: 30,),
+            const BooksAction()
           ],
         ),
       ),
     );
   }
 }
-
-
 
