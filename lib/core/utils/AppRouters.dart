@@ -1,7 +1,8 @@
 import 'package:booklt_store/Features/Home/Presentation/views/HomeView.dart';
 import 'package:go_router/go_router.dart';
-
+import '../../Features/Home/Presentation/views/widgets/CustomScrollBookDetailsView.dart';
 import '../../Features/Home/Presentation/views/widgets/bookDetails_view_body.dart';
+import '../../Features/Home/Presentation/views/widgets/book_details_view.dart';
 import '../../Features/Splash/Presentation/views/Splash_View.dart';
 
 
@@ -22,7 +23,7 @@ abstract class AppRouter
         ),
         GoRoute(
           path: KBookDetails,
-          builder: (context, state) => const bookDetailsViewBody(),
+          builder: (context, state) => const customScrollBookDetailView(),
         )
       ]
   );
