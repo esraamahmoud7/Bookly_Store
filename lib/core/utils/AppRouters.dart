@@ -4,6 +4,7 @@ import '../../Features/Home/Presentation/views/widgets/CustomScrollBookDetailsVi
 import '../../Features/Home/Presentation/views/widgets/bookDetails_view_body.dart';
 import '../../Features/Home/Presentation/views/widgets/book_details_view.dart';
 import '../../Features/Splash/Presentation/views/Splash_View.dart';
+import '../../Features/search/presentation/views/searchView.dart';
 
 
 
@@ -11,6 +12,8 @@ abstract class AppRouter
 {
   static const KHome='/homeView';
   static const KBookDetails='/BookDetails';
+  static const KBookSearch='/BookSearch';
+
   static final router = GoRouter(
       routes: <RouteBase>[
         GoRoute(
@@ -24,6 +27,10 @@ abstract class AppRouter
         GoRoute(
           path: KBookDetails,
           builder: (context, state) => const customScrollBookDetailView(),
+        ),
+        GoRoute(
+          path: KBookSearch,
+          builder: (context, state) => const SearchView(),
         )
       ]
   );
