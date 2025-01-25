@@ -11,14 +11,15 @@ class CustomTextField extends StatelessWidget {
           enabledBorder: buildOutlineInputBorder(),
           focusedBorder: buildOutlineInputBorder(),
           hintText: "Search",
-          suffixIcon: IconButton(onPressed: (){}, icon:Opacity(
-            opacity: .8,
-            child: const Icon(
-              FontAwesomeIcons.magnifyingGlass,
-              size: 24,
-            ),
-          ))
-      ),
+          suffixIcon: IconButton(
+              onPressed: () {},
+              icon: Opacity(
+                opacity: .8,
+                child: const Icon(
+                  FontAwesomeIcons.magnifyingGlass,
+                  size: 24,
+                ),
+              ))),
     );
   }
 
@@ -28,7 +29,6 @@ class CustomTextField extends StatelessWidget {
         color: Colors.white,
       ),
       borderRadius: BorderRadius.circular(12),
-
     );
   }
 }

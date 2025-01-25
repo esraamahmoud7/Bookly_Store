@@ -1,10 +1,9 @@
-import 'package:booklt_store/Features/Home/Presentation/views/HomeView.dart';
-import 'package:booklt_store/constants.dart';
 import 'package:booklt_store/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import 'SlidingText.dart';
+
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
 
@@ -12,11 +11,12 @@ class SplashViewBody extends StatefulWidget {
   State<SplashViewBody> createState() => _SplashViewBodyState();
 }
 
-class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProviderStateMixin {
+class _SplashViewBodyState extends State<SplashViewBody>
+    with SingleTickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<Offset> slidingAnimation;
 
-  int _Width=100;
+  int _Width = 100;
 
   @override
   void initState() {
@@ -25,8 +25,8 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
     initSlidingAnimation();
     NavigateHome();
   }
-  void dispose()
-  {
+
+  void dispose() {
     super.dispose();
     animationController.dispose();
   }
@@ -38,21 +38,27 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Image.asset(AssetsData.logo),
-        const SizedBox(height: 3,),
+        const SizedBox(
+          height: 3,
+        ),
         SlidingText(slidingAnimation: slidingAnimation)
       ],
     );
   }
-  void initSlidingAnimation() {
-    animationController = AnimationController(vsync: this,duration: Duration(seconds: 1));
 
-    slidingAnimation = Tween<Offset>(begin:const Offset(0, 2),end: Offset.zero).animate(animationController);
+  void initSlidingAnimation() {
+    animationController =
+        AnimationController(vsync: this, duration: Duration(seconds: 1));
+
+    slidingAnimation =
+        Tween<Offset>(begin: const Offset(0, 2), end: Offset.zero)
+            .animate(animationController);
 
     animationController.forward();
   }
 
   void NavigateHome() {
-    Future.delayed(Duration(seconds:2),(){
+    Future.delayed(Duration(seconds: 2), () {
       // Get.to(()=>const Homeview(),
       //     transition: Transition.fade,
       //     duration: const Duration(milliseconds: 250));

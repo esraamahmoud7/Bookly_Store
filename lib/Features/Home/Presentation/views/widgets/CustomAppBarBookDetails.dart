@@ -12,13 +12,21 @@ class CustomAppBarBookDetails extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         IconButton(
-            onPressed:(){GoRouter.of(context).push(AppRouter.KHome);},
-            icon: const Icon(Icons.close,size: 33,)
-        ),
+            onPressed: () {
+              GoRouter.of(context).push(AppRouter.KHome);
+            },
+            icon: const Icon(
+              Icons.close,
+              size: 33,
+            )),
         IconButton(
-            onPressed:(){GoRouter.of(context).push(AppRouter.KHome);},
-            icon: const Icon(Icons.shopping_cart_outlined,size: 30,)
-        ),
+            onPressed: () {
+              GoRouter.of(context).push(AppRouter.KHome);
+            },
+            icon: const Icon(
+              Icons.shopping_cart_outlined,
+              size: 30,
+            )),
       ],
     );
   }

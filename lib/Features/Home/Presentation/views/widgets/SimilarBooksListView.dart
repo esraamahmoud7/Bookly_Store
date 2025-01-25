@@ -12,14 +12,12 @@ class similarBooksListView extends StatelessWidget {
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: 5,
-        itemBuilder: (context,index)
-        {
+        itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: BookImageItem(),
           );
         },
-
       ),
     );
   }

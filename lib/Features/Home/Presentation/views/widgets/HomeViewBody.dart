@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styles.dart';
-import 'BestSellerCard.dart';
 import 'BestSellerListView.dart';
-import 'CustomBookImage.dart';
 import 'CustomAppBar.dart';
 import 'BooksListView.dart';
 
@@ -23,25 +21,31 @@ class HomeBody extends StatelessWidget {
                 child: customAppBar(),
               ),
               CardListView(),
-              SizedBox(height: 50,),
+              SizedBox(
+                height: 50,
+              ),
               Align(
                   alignment: Alignment.centerLeft,
                   child: Padding(
                     padding: const EdgeInsets.only(left: 16.0),
-                    child: Text("Best Seller",style: Styles.textStyle18,),
-                  )
-              ),
+                    child: Text(
+                      "Best Seller",
+                      style: Styles.textStyle18,
+                    ),
+                  )),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: SizedBox(height: 15,),
+                child: SizedBox(
+                  height: 15,
+                ),
               ),
             ],
-          ) ,
+          ),
         ),
-        SliverFillRemaining(child: BookSmallListViewItem(),)
+        SliverFillRemaining(
+          child: BookSmallListViewItem(),
+        )
       ],
     );
   }
 }
-
-

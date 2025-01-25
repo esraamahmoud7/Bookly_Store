@@ -10,11 +10,10 @@ class BookSmallListViewItem extends StatelessWidget {
     return ListView.builder(
         physics: NeverScrollableScrollPhysics(),
         padding: EdgeInsets.zero,
-        itemCount:10 ,
-        itemBuilder: (context,index)
-        {
+        itemCount: 10,
+        itemBuilder: (context, index) {
           return Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 20),
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
             child: BestSellerCard(),
           );
         });
