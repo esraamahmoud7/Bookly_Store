@@ -3,6 +3,7 @@ import 'package:booklt_store/Features/Home/Data/models/book_model/book_model.dar
 import 'package:booklt_store/core/errors/failure.dart';
 import 'package:booklt_store/core/utils/api_service.dart';
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 
 class HomeRepoImp implements HomeRepo
 {
@@ -30,11 +31,13 @@ class HomeRepoImp implements HomeRepo
     }
     catch(e)
     {
-      return left(ServerFailure());
+      if(e is DioException)
+        {
+          return left(ServerFailure.fromDioError(e));
+        }
+      return left(ServerFailure(e.toString()));
     }
-    var data = await apiServices.get(
-        endPoint:
-        '?q=subject:Programming&filter=free-ebooks&Sorting=newest');
+
   }
 
   @override
