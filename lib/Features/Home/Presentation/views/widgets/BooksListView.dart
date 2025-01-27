@@ -3,6 +3,7 @@ import 'package:booklt_store/core/widgets/customErrorWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../../core/utils/AppRouters.dart';
 import '../../../../../core/widgets/custom_Loading_Indicator.dart';
 import 'CustomBookImage.dart';
 
@@ -21,12 +22,14 @@ class CardListView extends StatelessWidget {
                   .size
                   .height * 0.3,
               child: ListView.builder(
+                //remove the empty from the sides when scroll
+                physics: const BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
-                itemCount: 5,
+                itemCount: state.books.length,
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    child: BookImageItem(),
+                    child: BookImageItem(imgURL: state.books[index].volumeInfo.imageLinks.thumbnail,),
                   );
                 },
               ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../../core/utils/AppRouters.dart';
 import 'BookDetailsSection.dart';
 import 'SimilarBooksSection.dart';
 
