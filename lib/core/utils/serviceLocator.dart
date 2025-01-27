@@ -6,7 +6,7 @@ import '../../Features/Home/Data/Repo/home_Repo_implementation.dart';
 
 final getIt = GetIt.instance;
 
-void setup() {
+void setupServiceLocator() {
   // singleton for APIService
   getIt.registerSingleton<ApiServices>(ApiServices(Dio()));
   // singleton for HomeRepoImp

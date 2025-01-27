@@ -9,6 +9,7 @@ import 'core/utils/AppRouters.dart';
 import 'core/utils/serviceLocator.dart';
 
 void main() {
+  setupServiceLocator();
   runApp(const Bookly());
 }
 
@@ -20,8 +21,16 @@ class Bookly extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (context)=> FeaturedBooksCubit(getIt.get<HomeRepoImp>())),
-        BlocProvider(create: (context)=> NewestBooksCubit(getIt.get<HomeRepoImp>())),
+        BlocProvider(
+          create: (context) => FeaturedBooksCubit(
+            getIt.get<HomeRepoImp>(),
+          )..fetchFeaturedBooks(),
+        ),
+        BlocProvider(
+          create: (context) => NewestBooksCubit(
+            getIt.get<HomeRepoImp>(),
+          )..fetchNewestBooks(),
+        )
       ],
       child: MaterialApp.router(
         routerConfig: AppRouter.router,
