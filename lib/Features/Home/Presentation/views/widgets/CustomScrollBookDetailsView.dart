@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'book_details_view.dart';
+import '../book_details_view.dart';
 
 class customScrollBookDetailView extends StatelessWidget {
   const customScrollBookDetailView({super.key});
