@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -11,17 +12,19 @@ class BookImageItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-        aspectRatio: 2.6 / 4,
-        child: GestureDetector(
-            onTap: (){GoRouter.of(context).push(AppRouter.KBookDetails);},
-          child: Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                image: DecorationImage(
-                    fit: BoxFit.fill, image: NetworkImage(imgURL))),
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(16),
+      child: AspectRatio(
+          aspectRatio: 2.6 / 4,
+          child: GestureDetector(
+              onTap: (){GoRouter.of(context).push(AppRouter.KBookDetails);},
+            child: CachedNetworkImage(
+              fit: BoxFit.fill,
+                imageUrl: imgURL,
+              errorWidget: (context,url,error)=>Icon(Icons.report_problem),
+            )
           ),
-        ),
+      ),
     );
   }
 }
