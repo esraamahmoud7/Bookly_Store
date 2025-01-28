@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/AppRouters.dart';
 import '../../../../../core/utils/assets.dart';
+import 'cachedNetwork.dart';
 
 class BookImageItem extends StatelessWidget {
   const BookImageItem({super.key, required this.imgURL});
@@ -18,11 +19,7 @@ class BookImageItem extends StatelessWidget {
           aspectRatio: 2.6 / 4,
           child: GestureDetector(
               onTap: (){GoRouter.of(context).push(AppRouter.KBookDetails);},
-            child: CachedNetworkImage(
-              fit: BoxFit.fill,
-                imageUrl: imgURL,
-              errorWidget: (context,url,error)=>Icon(Icons.report_problem),
-            )
+            child: cachedNetwork(imgURL: imgURL,)
           ),
       ),
     );

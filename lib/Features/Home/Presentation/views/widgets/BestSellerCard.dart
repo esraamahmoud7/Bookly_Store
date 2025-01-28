@@ -1,3 +1,5 @@
+import 'package:booklt_store/Features/Home/Data/models/book_model/book_model.dart';
+import 'package:booklt_store/Features/Home/Presentation/views/widgets/cachedNetwork.dart';
 import 'package:booklt_store/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -6,7 +8,9 @@ import '../../../../../core/utils/AppRouters.dart';
 import 'bestSeller_BookDataCard.dart';
 
 class BestSellerCard extends StatelessWidget {
-  const BestSellerCard({super.key});
+  const BestSellerCard({super.key, required this.book});
+
+  final BookModel book;
 
   @override
   Widget build(BuildContext context) {
@@ -20,18 +24,12 @@ class BestSellerCard extends StatelessWidget {
           children: [
             AspectRatio(
               aspectRatio: 2.5 / 4,
-              child: Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    image: DecorationImage(
-                        fit: BoxFit.fill,
-                        image: AssetImage(AssetsData.testImage))),
-              ),
+              child: cachedNetwork(imgURL: book.volumeInfo.imageLinks.thumbnail,)
             ),
             SizedBox(
               width: 30,
             ),
-            BookDataCard()
+            Expanded(child: BookDataCard(book: book,))
           ],
         ),
       ),
