@@ -29,7 +29,7 @@ class CardListView extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    child: BookImageItem(imgURL: state.books[index].volumeInfo.imageLinks.thumbnail,),
+                    child: BookImageItem(imgURL: state.books[index].volumeInfo.imageLinks?.thumbnail ?? 'https://th.bing.com/th/id/OIP.3Kt8D-Um9WqJO221WbKIvgAAAA?pid=ImgDet&w=206&h=154&c=7&dpr=1.3',),
                   );
                 },
               ),

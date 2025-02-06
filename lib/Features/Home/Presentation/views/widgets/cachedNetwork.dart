@@ -8,6 +8,7 @@ class cachedNetwork extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CachedNetworkImage(
+      fadeOutCurve: Curves.fastEaseInToSlowEaseOut,
       fit: BoxFit.fill,
       imageUrl: imgURL,
       errorWidget: (context,url,error)=>Icon(Icons.report_problem),
