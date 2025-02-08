@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styles.dart';
+import '../../../Data/models/book_model/book_model.dart';
 import 'SimilarBooksListView.dart';
 
 class SimilarBooksSection extends StatelessWidget {
@@ -20,9 +21,9 @@ class SimilarBooksSection extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          height: 25,
+          height: 15,
         ),
-        const similarBooksListView(),
+        similarBooksListView(),
       ],
     );
   }

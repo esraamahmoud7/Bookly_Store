@@ -16,7 +16,8 @@ class BestSellerCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.KBookDetails);
+        print(book.volumeInfo.title);
+        GoRouter.of(context).push(AppRouter.KBookDetails,extra: book,);
       },
       child: SizedBox(
         height: 125,
@@ -24,8 +25,9 @@ class BestSellerCard extends StatelessWidget {
           children: [
             AspectRatio(
               aspectRatio: 2.5 / 4,
-              child: cachedNetwork(imgURL: book.volumeInfo.imageLinks?.thumbnail ?? 'https://th.bing.com/th/id/OIP.3Kt8D-Um9WqJO221WbKIvgAAAA?pid=ImgDet&w=206&h=154&c=7&dpr=1.3')
-            ),
+              child: cachedNetwork(imgURL:  book.volumeInfo.imageLinks?.thumbnail ??
+                  'https://th.bing.com/th/id/OIP.3Kt8D-Um9WqJO221WbKIvgAAAA?pid=ImgDet&w=206&h=154&c=7&dpr=1.3')
+                 ),
             SizedBox(
               width: 30,
             ),
