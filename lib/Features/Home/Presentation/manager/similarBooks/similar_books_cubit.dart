@@ -1,7 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:meta/meta.dart';
-
 import '../../../Data/Repo/homeRepo.dart';
 import '../../../Data/models/book_model/book_model.dart';
 
@@ -20,6 +18,7 @@ class SimilarBooksCubit extends Cubit<SimilarBooksState> {
 
     result.fold((failure)
     {
+      fetchSimilarBooks(subject: "English Language");
       emit(SimilarBooksFailure(failure.message));
     }, (books)
     {

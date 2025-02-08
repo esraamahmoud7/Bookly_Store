@@ -75,24 +75,10 @@ class HomeRepoImp implements HomeRepo
   @override
   Future<Either<Failure, List<BookModel>>> fetchSimilarBooks({required String subject})async {
     try{
-      var data;
-
-      if(subject == null)
-        {
-           data = await apiServices.get(
-              endPoint:
-              '?Filtering=free-ebooks&Sorting=relevance&q=subject:Learning English');
-        }
-      else
-        {
-           data = await apiServices.get(
+      var data = await apiServices.get(
               endPoint:
               '?Filtering=free-ebooks&Sorting=relevance&q=subject:${subject}');
-        }
-      if(data.length == 0)
-        {
-          return fetchFeaturedBooks();
-        }
+
 
       List<BookModel> books = [];
 

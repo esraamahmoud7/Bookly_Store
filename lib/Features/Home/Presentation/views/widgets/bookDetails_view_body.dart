@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../../../../core/utils/AppRouters.dart';
 import '../../../Data/models/book_model/book_model.dart';
 import 'BookDetailsSection.dart';
 import 'SimilarBooksSection.dart';
@@ -16,11 +15,11 @@ class bookDetailsViewBody extends StatelessWidget {
         children: [
           BookDetailsSection(book: book,),
           SizedBox(height: 15,),
-          // Expanded(child: const SizedBox(height: 10)),
+          Expanded(child: const SizedBox(height: 20)),
           SimilarBooksSection(),
-          // const SizedBox(
-          //   height: 40,
-          // )
+          const SizedBox(
+            height: 10,
+          )
         ],
       ),
     );
