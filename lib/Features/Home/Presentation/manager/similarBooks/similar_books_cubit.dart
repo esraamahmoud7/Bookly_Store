@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+import '../../../../../core/models/book_model/book_model.dart';
 import '../../../Data/Repo/homeRepo.dart';
-import '../../../Data/models/book_model/book_model.dart';
 
 part 'similar_books_state.dart';
 

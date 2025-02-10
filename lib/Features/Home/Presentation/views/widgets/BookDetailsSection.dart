@@ -1,5 +1,5 @@
-import 'package:booklt_store/Features/Home/Data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
+import '../../../../../core/models/book_model/book_model.dart';
 import '../../../../../core/utils/styles.dart';
 import 'BookRate.dart';
 import 'BooksAction.dart';

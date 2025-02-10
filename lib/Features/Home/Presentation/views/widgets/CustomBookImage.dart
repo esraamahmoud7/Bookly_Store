@@ -2,9 +2,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../../core/models/book_model/book_model.dart';
 import '../../../../../core/utils/AppRouters.dart';
-import '../../../../../core/utils/assets.dart';
-import '../../../Data/models/book_model/book_model.dart';
 import 'cachedNetwork.dart';
 
 class BookImageItem extends StatelessWidget {

@@ -1,6 +1,6 @@
-import 'package:booklt_store/Features/Home/Data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../../core/models/book_model/book_model.dart';
 import '../book_details_view.dart';
 
 class customScrollBookDetailView extends StatelessWidget {

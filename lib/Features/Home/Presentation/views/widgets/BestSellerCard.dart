@@ -1,9 +1,8 @@
-import 'package:booklt_store/Features/Home/Data/models/book_model/book_model.dart';
 import 'package:booklt_store/Features/Home/Presentation/views/widgets/cachedNetwork.dart';
-import 'package:booklt_store/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../../core/models/book_model/book_model.dart';
 import '../../../../../core/utils/AppRouters.dart';
 import 'bestSeller_BookDataCard.dart';
 

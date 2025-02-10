@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/widgets/customErrorWidget.dart';
 import '../../../../../core/widgets/custom_Loading_Indicator.dart';
-import '../../../Data/models/book_model/book_model.dart';
 import 'CustomBookImage.dart';
 
 class similarBooksListView extends StatelessWidget {

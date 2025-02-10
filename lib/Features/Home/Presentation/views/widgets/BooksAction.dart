@@ -1,6 +1,6 @@
-import 'package:booklt_store/Features/Home/Data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/functions/launchUrl.dart';
+import '../../../../../core/models/book_model/book_model.dart';
 import '../../../../../core/widgets/CustomButton.dart';
 
 class BooksAction extends StatelessWidget {
@@ -15,7 +15,7 @@ class BooksAction extends StatelessWidget {
         children: [
            const Expanded(
               child: Custombutton(
-            text: "19.99€",
+            text: "Free",
             backgroundColor: Color(0xffffffff),
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(12), bottomLeft: Radius.circular(12)),

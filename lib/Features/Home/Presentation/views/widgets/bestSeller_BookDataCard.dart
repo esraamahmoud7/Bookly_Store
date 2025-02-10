@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../constants.dart';
+import '../../../../../core/models/book_model/book_model.dart';
 import '../../../../../core/utils/styles.dart';
-import '../../../Data/models/book_model/book_model.dart';
 import 'BookRate.dart';
 
 class BookDataCard extends StatelessWidget {
@@ -34,6 +34,7 @@ class BookDataCard extends StatelessWidget {
             opacity: 0.7,
             child: Text(
               book.volumeInfo.authors![0],
+              maxLines: 1,
               style: Styles.textStyle16.copyWith(fontStyle: FontStyle.italic),
             )),
         SizedBox(

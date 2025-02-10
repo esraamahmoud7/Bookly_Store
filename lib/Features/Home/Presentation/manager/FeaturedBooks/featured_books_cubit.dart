@@ -2,8 +2,8 @@ import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 
+import '../../../../../core/models/book_model/book_model.dart';
 import '../../../Data/Repo/homeRepo.dart';
-import '../../../Data/models/book_model/book_model.dart';
 
 part 'featured_books_state.dart';
 
